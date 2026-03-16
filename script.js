@@ -590,3 +590,39 @@ requestAnimationFrame(animate)
 animate()
 
 }
+
+function startCountdown() {
+
+const birthdayMonth = 2;  // August = 7 (months start from 0)
+const birthdayDay = 17;   // change to actual birthday
+
+const now = new Date();
+let nextBirthday = new Date(now.getFullYear(), birthdayMonth, birthdayDay);
+
+if (now > nextBirthday) {
+    nextBirthday = new Date(now.getFullYear() + 1, birthdayMonth, birthdayDay);
+}
+
+function updateCountdown1() {
+
+const currentTime = new Date().getTime();
+const distance = nextBirthday - currentTime;
+
+const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+const hours = Math.floor((distance / (1000 * 60 * 60)) % 24);
+const minutes = Math.floor((distance / (1000 * 60)) % 60);
+const seconds = Math.floor((distance / 1000) % 60);
+
+document.getElementById("countdownTimer").innerHTML =
+days + " Days " +
+hours + " Hours " +
+minutes + " Minutes " +
+seconds + " Seconds";
+
+}
+
+updateCountdown1();
+setInterval(updateCountdown1, 1000);
+
+}
+
