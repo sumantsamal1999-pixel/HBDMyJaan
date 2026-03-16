@@ -114,6 +114,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
 // Function to show current step
 function showStep(step) {
+    document.getElementById("birthdayMusic").play();
     // Hide all steps
     document.querySelectorAll('.step').forEach(el => {
         el.classList.remove('active');
