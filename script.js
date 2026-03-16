@@ -163,7 +163,7 @@ function showStep(step) {
             break;
         case 4:
             // Type out message
-            typeMessage();
+            typeMessage1();
             // Animate photo frame
             gsap.from(".photo-frame", {
                 y: 50,
@@ -356,7 +356,7 @@ function createPetals() {
 }
 
 // Function to type out message
-function typeMessage() {
+function typeMessage1() {
     const messages = [
         `Dear ${userName},`,
         "On your special day, I want you to know...",
@@ -365,6 +365,7 @@ function typeMessage() {
         "Your laugh is my favorite sound in the world.",
         "Your love gives me strength and happiness.",
         "I'm so grateful to have you in my life.",
+        "You are my Jaan, The love of my life and the Queen of my heart",
         "May this year bring you all the joy you deserve.",
         "You deserve the world and more.",
         "Happy Birthday, my love! ❤"
